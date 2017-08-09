@@ -9,10 +9,10 @@ chai.use(sinonChai);
 var main = require("../lib/main.js");
 
 
-describe("测试描述", function(){
+describe("buildBottlesSong", function(){
     sinon.spy(console, 'log');
 
-    it("测试用例1", function(){
+    it("return empty String given empty String", function(){
 
         var result = main();
         var expect_string = '';
