@@ -29,6 +29,17 @@ describe("buildBottlesSong", function(){
         expect(expect_string).to.equal(result);
     });
 
+    it("return two bottles String given two bottles", function(){
+
+        var result = bottleSong.buildBottleSong(2);
+        var expect_string = '2 bottles of beer on the wall, 2 bottles of beer.' +'\n'+
+            'Take one down and pass it around, 1 bottle of beer on the wall.'+'\n'+
+            '1 bottle of beer on the wall, 1 bottle of beer.'+'\n'+
+            'Take one down and pass it around, no more bottles of beer on the wall.';
+
+        expect(expect_string).to.equal(result);
+    });
+
     xit("测试用例2", function(){
 
         main();
