@@ -6,7 +6,7 @@ var sinonChai = require("sinon-chai");
 var expect = chai.expect;
 chai.use(sinonChai);
 
-var main = require("../lib/main.js");
+var bottleSong = require("../lib/main.js");
 
 
 describe("buildBottlesSong", function(){
@@ -14,13 +14,22 @@ describe("buildBottlesSong", function(){
 
     it("return empty String given empty String", function(){
 
-        var result = main();
+        var result = bottleSong.buildBottleSong();
         var expect_string = '';
         
         expect(expect_string).to.equal(result);
     });
 
-    it("测试用例2", function(){
+    it("return one bottle String given one bottle", function(){
+
+        var result = bottleSong.buildBottleSong(1);
+        var expect_string = '1 bottle of beer on the wall, 1 bottle of beer.\n' +
+            'Take one down and pass it around, no more bottles of beer on the wall.';
+
+        expect(expect_string).to.equal(result);
+    });
+
+    xit("测试用例2", function(){
 
         main();
         var result = _.flatten(console.log.args).join("\n");
