@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # js基础项目
 
 该项目主要用于
@@ -29,3 +30,7 @@
     
 测试用例2用于测试函数中有输出的情况
     
+=======
+# task8-postnet
+2017ThoughtWorks Summer Training
+>>>>>>> 5146a95eb7851d38eb4032f8fca88ae43e02aa9c
