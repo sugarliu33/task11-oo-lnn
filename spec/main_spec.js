@@ -7,23 +7,27 @@ var expect = chai.expect;
 chai.use(sinonChai);
 
 
-var main = require("../lib/main");
+var main = require("../lib/main.js");
 
 describe("calculateCheckcode", function(){
-    sinon.spy(console, 'log');
-    it ("should return checkCode given postNumber", function () {
-        var arr = [9,5,7,1,3];
-        var result = main(arr);
-        var expectString = [9,5,7,1,3,5];
-        expect(result).to.Equal(expectString);
+    //sinon.spy(console, 'log');
+    it ("should return checkCode given postNumber without '-'", function () {
+        var arr = '95713';
+        var result = main.main(arr);
+        var expectStr = '957135';
+        expect(result).to.equal(expectStr);
+    });
+    it ("should return checkCode given postNumber with '-'", function () {
+        var arr = [5,5,5,5,5,'-',1,2,3,7];
+        var result = main.main(arr);
+        var expectStr = [ 5,5,5,5,5,1,2,3,7,2 ];
+        expect(result).to.equal(expectStr);
     });
 
     xit("测试用例2", function(){
 
-        main();
         var result = _.flatten(console.log.args).join("\n");
         var expect_string = '';
-
         expect(expect_string).to.equal(result);
     });
 });
