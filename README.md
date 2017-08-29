@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # js基础项目
 
 该项目主要用于
@@ -34,3 +35,7 @@
 # task8-postnet
 2017ThoughtWorks Summer Training
 >>>>>>> 5146a95eb7851d38eb4032f8fca88ae43e02aa9c
+=======
+# task11-oo-lnn
+ThoughtWorks 2017 Summer Traning
+>>>>>>> 7773339afa62aa39afbce2961587f8efec57aaf6
